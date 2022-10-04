@@ -15,7 +15,7 @@ export default function ContactPage() {
 
       <p className={'description'}>
         Get started by editing{' '}
-        <code className={'code'}>pages/contact.jsx</code>
+        <code className={'code'}>pages/contact/index.jsx</code>
       </p>
     </MainLayout>
   )
