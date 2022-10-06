@@ -1,0 +1,25 @@
+FROM node:16-alpine
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY package.json /app
+
+RUN yarn install
+
+COPY . /app
+
+RUN yarn build
+
+# USER nextjs
+
+EXPOSE 3000
+
+CMD [ "yarn", "start" ]
+
+# Crear imagen
+# correr en terminal ->  "docker build -t nextjs-initial ."
+
+# Montar imagen en contenerdor
+# correr en terminal -> "docker run --name=next-app -p 3000:3000 nextjs-initial"
